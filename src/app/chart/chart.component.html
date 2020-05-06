@@ -1,1 +1,16 @@
-<p>chart works!</p>
+<div class="ml-5" style="text-align:left;width:700px;margin-top: 100px;">
+<mat-form-field>
+    <mat-label>Choose Date</mat-label>
+    <input  [min]="minDate" [max]="maxDate" matInput [matDatepicker]="myPicker"  placeholder="date" (dateChange)="someMethodName($event)">
+    <mat-datepicker-toggle  matSuffix [for]="myPicker"></mat-datepicker-toggle>
+    <mat-datepicker #myPicker></mat-datepicker>
+</mat-form-field>
+
+</div>
+<div class="chart-wrapper" style="width: 600px;">
+    <canvas baseChart 
+    [data]="doughnutChartData"
+    [labels]="doughnutChartLabels"
+    [chartType]="doughnutChartType">
+  </canvas>
+</div>
