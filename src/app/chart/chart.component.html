@@ -14,3 +14,13 @@
     [chartType]="doughnutChartType">
   </canvas>
 </div>
+<div class="chart-wrapper" style="width: 600px;">
+    <canvas baseChart 
+    [data]="pieChartData" 
+    [labels]="pieChartLabels" 
+    [chartType]="pieChartType"
+    [options]="pieChartOptions"
+    [plugins]="pieChartPlugins"
+    [legend]="pieChartLegend">
+  </canvas>
+</div>
